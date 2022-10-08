@@ -4,8 +4,7 @@ a {
     text-decoration: none;
   }
   
-  input,
-  button {
+input, button {
     background: none;
     outline: none;
     border: none;
@@ -13,5 +12,34 @@ a {
 
 
 
+.wrapper{
+  position: relative;
+  height: 100vh;
+}
 
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ----------------------여기서부터 사이드바-------------------------- */
+.nav{
+  width: 250px;
+  height: 150px;
+  position: absolute;
+  right: 20%;
+  top: 50%;
+  background: orange;
+  transform: translate(0, -50%);
+}
