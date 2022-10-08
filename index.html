@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- reset.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+
+    <!-- linear icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" />
+
+
+
+
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="loginSection">
+            <div id="login">
+                <div class="idBlock loginBlock">
+                    <div class="loginIcon idIcon"><i class="fa-solid fa-id-badge fa-2x"></i></div>
+                    <input id="id" type="text" placeholder="아이디를 입력하세요">
+                </div>
+                <div class="pwBlock loginBlock">
+                    <div class="loginIcon pwIcon"><i class="fa-solid fa-key fa-2x"></i></div>
+                    <input id="password" type="password" type="text" placeholder="비밀번호를 입력하세요">
+                </div>
+            </div>
+            <div class="loginButton">
+                <button id="loginBtn"><i class="fa-solid fa-lock fa-4x"></i></button>
+            </div>
+        </div>
+        <div>
+            <aside>
+                <span>유저네임</span>
+
+
+                <button>로그아웃</button>
+
+            </aside>
+
+
+        </div>
+
+
+        <div class="page">
+            <!-- 타임스탬프는 애드차일드로 추가해서 html에서는 생략 -->
+            <h1> 제목</h1>
+            <p class="text"> 내용 </p>
+            <div>페이지 번호</div>
+        </div>
+        <div>
+            <!-- css써서 -->
+            <button class="prev-page"> 왼쪽방향버튼</button>
+
+            <!-- 페이지 추가 버튼은 JS로 replace-->
+            <button class="next-page">오른쪽 방향버튼</button>
+        </div>
+
+        <aside class="nav"> 사이드바
+            <button class="time-stamp">타임스탬프</button>
+            <div class="iconDropdown">
+                <button id="selectIcon">Select Icon
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <i class="fa-regular fa-address-card"></i>
+                    <i class="fa-regular fa-credit-card"></i>
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-hand-point-up"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-hospital"></i>
+                    <i class="fa-regular fa-square-check"></i>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+</body>
+
+</html>
