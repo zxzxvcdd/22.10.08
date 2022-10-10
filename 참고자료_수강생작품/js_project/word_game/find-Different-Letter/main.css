@@ -1,0 +1,403 @@
+/* common */
+.hide{
+    display: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* wrapper */
+.wrapper {
+    width: 1100px;
+    min-width: 1300px;
+    min-width: 650px;
+    font-size: 25px;
+    font-family: 'NanumSquareRound', sans-serif;
+
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%)
+}
+
+
+/*header */
+h1.titleH1{
+    border: 8px double #000;
+    background: #fff;
+
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+
+    font-size: 80px;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/*section */
+section{
+    border: 8px double #000;
+    background: #fff;
+
+    padding: 20px 10px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+
+/*section - colorBtn*/
+#colorBtn{
+    width: 130px;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+#colorBtn button{
+    width: 30px;
+    height: 30px;
+    line-height: 60px;
+    font-size: 40px;
+    text-align: center;
+    cursor: pointer;
+
+    margin-bottom: 10px;
+    border: 6px solid;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+
+
+/* section - gamebord */
+#gamebord { 
+    width: 570px;
+    height: 570px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+}
+
+/* section - gamebord - explain */
+#explain {
+    width: 350px;
+    height: 350px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#explain .game-story{
+    font-size: 40px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+
+#explain .level-choise{
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+#explain .level-wrap{
+    display: flex;
+    justify-content: center;
+}
+
+#explain .level-wrap div{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+
+    border: 1px dotted #000;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+
+/* section - gamebord - letterBord  */
+#letterBord{
+    font-size: 80px;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#letterBord div{
+    cursor: pointer;   
+}
+
+/* section - nav */
+nav {
+    width: 130px;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+/* nav - clock */
+#clock {
+    font-size: 30px;
+    display: flex;
+    flex-flow: column wrap;
+}
+#clock label{
+    font-size: 25px;
+}
+
+/* nav - checkboxBtn */
+#checkboxBtn{
+    display: flex;
+    flex-flow: column wrap;
+}
+#checkboxBtn label{
+    cursor: pointer;
+}
+
+
+/* -------------- js 적용 CSS ---------------*/
+
+/* 색 바꾸기 모드 */
+/* sliverMode */
+#colorBtn .silverBtn{
+    background: #392f31;
+    color: #e3e5de;
+    text-shadow: 1px 1px 1px #3e3e3e;
+}
+body.sliverMode{
+    background: #e3e5de;
+    color: #392f31;
+    text-shadow: 1px 1px 1px #3e3e3e;
+    box-shadow: 2px 2px 2px #3e3e3e;
+}
+h1.sliverMode{
+    background: #e3e5de;
+    border: 5px solid #392f31;
+    color: #392f31;
+    text-shadow: 1px 1px 1px #3e3e3e;
+}
+section.sliverMode{
+    background: #e3e5de;
+    border: 5px solid #392f31;
+}
+section.sliverMode #gamebord{
+    background: #e3e5de;    
+    color: #392f31;
+}
+section.sliverMode #letterBord{
+    text-shadow: 1px 1px 1px #3e3e3e;
+}
+section.sliverMode #explain .level-wrap div{
+    border: 1px dotted #392f31;
+}
+
+
+/* blackMode */
+#colorBtn .blackBtn{
+    background: #3498DB;
+    color: #000;
+    text-shadow: 2px 2px 2px #0080ff;
+}
+body.blackMode{
+    background: #000;
+    color: #AED6F1;
+}
+h1.blackMode{
+    background: #000;
+    border: 5px dotted #AED6F1;
+    color: #3498DB;
+}
+section.blackMode{
+    background: #000;
+    border: 5px dotted #AED6F1;
+}
+section.blackMode #gamebord{
+    background: #000;    
+    color: #3498DB;
+    text-shadow: 2px 2px 2px #3e3e3e;
+}
+section.blackMode #explain .level-wrap div{
+    border: 1px dotted #AED6F1;
+}
+
+/* greenMode */
+#colorBtn .greenBtn{
+    background: #ffd700;
+    color: #186A3B;
+    text-shadow: 2px 2px 2px #0c170f;
+}
+body.greenMode{
+    background: #186A3B;
+    color: #ffd700;
+    box-shadow: 2px 2px 2px #0c170f;
+}
+h1.greenMode{
+    background: #186A3B;
+    border: 8px double #ffd700;
+    color: #ffd700;
+    text-shadow: 2px 2px 2px #0c170f;
+    box-shadow: 2px 2px 2px #0c170f;
+}
+section.greenMode{
+    background: #186A3B;
+    border: 8px double #ffd700;
+    box-shadow: 2px 2px 2px #0c170f;
+}
+section.greenMode #gamebord{
+    background: #186A3B;    
+    color: #ffd700;
+    text-shadow: 2px 2px 2px #0c170f;
+}
+section.greenMode #explain .level-wrap div{
+    border: 1px dotted #ffd700;
+}
+
+
+
+/* purpleMode */
+#colorBtn .purpleBtn{
+    background: #ff00ff;
+    color: #8b00ff;
+    text-shadow: 2px 2px 2px #0080ff;
+}
+body.purpleMode{
+    background: #8b00ff;
+    color: #e0c0e0;
+    box-shadow: 2px 2px 2px #0080ff;
+}
+h1.purpleMode{
+    background: #8b00ff;
+    border: 8px double #e0c0e0;
+    color: #ff00ff;
+    text-shadow: 2px 2px 2px #0080ff;
+    box-shadow: 2px 2px 2px #808080;
+}
+section.purpleMode{
+    background: #8b00ff;
+    border: 8px double #e0c0e0;
+    box-shadow: 2px 2px 2px #808080;
+}
+section.purpleMode #gamebord{
+    background: #8b00ff;    
+    text-shadow: 2px 2px 2px #808080;
+}
+section.purpleMode .game-story{
+    color: #ff00ff;
+    text-shadow: 2px 2px 2px #0080ff;
+}
+section.purpleMode #letterBord{
+    color: #ff00ff;
+    text-shadow: 2px 2px 3px #0080ff;
+}
+section.purpleMode #explain .level-wrap div{
+    border: 1px dotted #ff00ff;
+}
+
+
+/* explain 사라지기 */
+#explain.disappear {
+    display: none;
+}
+
+
+/* letterBord - 난이도별 크기*/
+#letterBord.level9{
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+#letterBord.level9 div{
+    font-size: 80px;
+    margin: 0 10px;
+}
+
+#letterBord.level49{
+    width: 450px;
+    height: 450px;
+    padding: 10px;
+}
+#letterBord.level49 div{
+    font-size: 50px;
+    margin: 8px;
+}
+
+#letterBord.level100{
+    width: 550px;
+    height: 550px;
+    padding: 10px;
+}
+#letterBord.level100 div{
+    font-size: 45px;
+    margin: 5px;
+}
+
+
+/* 힌트 보여주기 */
+#letterBord .clickHere.hint{
+    font-weight: 700;
+}
+
+
+/* answer letter */
+/* 정답 숨어있는 상태 */
+#answerLetter {
+    display: none;
+    width: 570px;
+    height: 570px;
+    position: relative;
+    font-size: 2em;
+}
+
+/* 정답 나오기! */
+#answerLetter.finished {
+    display: flex;
+}
+
+/* 정답 글자들 위치 */
+#answerLetter .first {
+    position: absolute;
+    top: 150px;
+    left: 115px;
+}
+#answerLetter .second {
+    position: absolute;
+    top: 350px;
+    left: 50px;
+}
+#answerLetter .third {
+    position: absolute;
+    top: 450px;
+    left: 140px;
+}
+#answerLetter .force {
+    position: absolute;
+    top: 330px;
+    left: 260px;
+}
+#answerLetter .fifth {
+    position: absolute;
+    top: 400px;
+    left: 380px;
+}
+#answerLetter .sixth {
+    position: absolute;
+    top: 300px;
+    left: 460px;
+}

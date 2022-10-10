@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+/* .wrap {
+    background:white;
+    height: 99%;
+} */
+
+.clock {
+    width: 80%;
+    height: 280px;
+    top: 10px;
+
+    border: 8px solid #000;
+    border-radius: 50%;
+
+    margin: 0 auto;
+    margin-bottom: 0px;
+    position: relative;
+    background:url(./1.jpg);
+    
+}
+
+.clock .numbers div {
+    position: absolute;
+    font-size: 26px;
+}
+.numbers #num3 {
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    right: 2px;
+}
+.numbers #num6 {
+    bottom: 0;
+    text-align: center;
+    right: 0;
+    left: 0;
+}
+.numbers #num9 {
+    bottom: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    left: 2px;
+}
+.numbers #num12 {
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+}
+#num1 {
+    top: calc(140px - 120px);
+    right: calc(140px - 80px);
+}
+#num2 {
+    top: calc(140px - 80px);
+    right: calc(140px - 120px)
+}
+#num4 {
+    bottom: calc(140px - 80px);
+    right: calc(140px - 120px)
+}
+#num5 {
+    bottom: calc(140px - 120px);
+    right: calc(140px - 80px)
+}
+#num11 {
+    top: calc(140px - 120px);
+    left: calc(140px - 80px)
+}
+#num10 {
+    top: calc(140px - 80px);
+    left: calc(140px - 120px)
+}
+#num8 {
+    bottom: calc(140px - 80px);
+    left: calc(140px - 120px)
+}
+#num7 {
+    bottom: calc(140px - 120px);
+    left: calc(140px - 80px)
+}
+/* 초,분,시 */
+.clock #center {
+    /* background: blue; */
+    position: absolute;
+    border: 1px solid black;
+    width: 14px;
+    height: 14px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    margin: auto;
+    border-radius: 50%;
+}
+.clock #hour {
+    position: absolute;
+    width: 7px;
+    height: 60px;
+    background: black;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 130px;
+    transform-origin: center bottom;
+}
+.clock #minute {
+    position: absolute;
+    width: 2px;
+    height: 95px;
+    background-color: black;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 130px;
+    transform-origin: center bottom;
+}
+.clock #second {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background-color: red;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 130px;
+    transform-origin: center bottom;
+}
+/* 디지털시계 */
+.digital-clock {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    padding: 40px;
+}
