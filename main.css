@@ -38,11 +38,23 @@ input, button {
 
   /* ----------------------여기서부터 우측 사이드바-------------------------- */
 .nav{
+  font-size: 24px;
+  text-align: center;
+  
+  border-radius: 10px;
   width: 250px;
   height: 150px;
   position: absolute;
   right: 20%;
   top: 50%;
-  background: orange;
   transform: translate(0, -50%);
+  
+  background: orange;
 }
+
+.nav > *{
+  margin: 10px auto 10px;
+  
+}
+
+

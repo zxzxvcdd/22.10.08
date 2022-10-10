@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>글자 찾기 게임</title>
+    <!-- css -->
+    <!-- reset -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+    <!-- custom -->
+    <link rel="stylesheet" href="main.css">
+
+    <!-- font -->
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <!-- js -->
+    <script src="app.js" defer></script>
+
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="">
+
+    <!-- 전제 래핑 -->
+    <div class="wrapper">
+        <header>
+            <h1 class="titleH1"><span>웃!</span> 여기 있다!</h1>
+        </header>
+
+        <!-- 게임 메인 화면 -->
+        <section class="">
+            <!-- 옵션 1: 버튼을 누르면 배경색과 글씨가 바뀐다 -->
+            <div id="colorBtn">
+                <!-- 배경: 흰 글씨: 검 -->
+                <button type="button" class="silverBtn"></button>
+                <!-- 배경: 검정 글씨: 하늘색 -->
+                <button type="button" class="blackBtn"></button>
+                <!-- 배경: 찐초록 글씨: 노랑 -->
+                <button type="button" class="greenBtn"></button>
+                <!-- 배경: 보라색 글씨: 흰색 -->
+                <button type="button" class="purpleBtn"></button>
+            </div>
+
+            <!-- 게임판 : 3X3으로 글자가 깔린다, 정답은 랜던 장소에 -->
+            <div id="gamebord">
+                <!-- 게임 시작 전 설명 및 난이도 선택 -->
+                <div id="explain">
+                    <div class="explain-wrap">
+                        <div class="game-story">
+                            "웃" 얘는 <br> 만나자고 해놓고 <br> 어디 있는 거야?<br>
+                            웃 좀 찾아주겠니?
+                        </div>
+
+                        <div class="level-choise">
+                            <p>[ 난이도를 선택해 주세요 ]</p>
+                        </div>
+                        <!-- 게임시작 버튼 -->
+                        <div class="level-wrap">
+                            <div class="easy startBtn">하</div>
+                            <div class="nomal startBtn">중</div>
+                            <div class="hard startBtn">상</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 게임보드(글씨들이 깔리는 판) -->
+                <div id="letterBord">
+                    <!-- <div>훗</div>
+                    <div>훗</div>
+                    <div>훗</div>
+                    <div>훗</div>
+                    <div>훗</div>
+                    <div>훗</div>
+                    <div>훗</div>
+                    <div class="clickHere">웃</div>
+                    <div>훗</div> -->
+                </div>
+
+                <!-- 게임 클리어 후 나올 화면 -->
+                <div id="answerLetter">
+                    <div class="first">와, 신난다!<br>다 같이 놀자~ <span>웃</span></div>
+                    <div class="second">훗</div>
+                    <div class="third">욧</div>
+                    <div class="force">윳</div>
+                    <div class="fifth">읏</div>
+                    <div class="sixth">옷</div>
+                    
+                </div>
+            </div>
+
+            <nav>
+                <!-- 타이머 : 단계를 완료할 때까지 시간을 잰다-->
+                <div id="clockWrap">
+                    <div id="clock">00:00:00</div>
+                </div>
+
+                <!-- li에 타이머 복사, 힌트 사용 카우트  -->
+                <!-- <div id="result">
+                    <ul>
+                        <li></li>
+                    </ul>
+                    <div id="hint">힌트 사용: <span></span>회</div>
+                </div> -->
+
+                <div id="checkboxBtn">
+                    <!-- 옵션 3: 체크하면 9초쯤에 글씨가 굵어진다 -->
+                    <label class="checkbox lnrmagnifie">
+                        <span class="lnr lnr-magnifier"></span>
+                        <span class="text">힌트</span>
+                    </label>
+                    <!-- 옵션 4: 시작으로 돌아가기 버튼 -->
+                    <label class="checkbox lnrredo">
+                        <span class="lnr lnr-redo"></span>
+                        <span class="text">초기화</span>
+                    </label>
+                </div>
+            </nav>
+        </section>
+    </div>
+</body>
+
+</html>

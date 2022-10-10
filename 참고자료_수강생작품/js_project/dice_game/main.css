@@ -1,0 +1,286 @@
+
+/* reset */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+input, button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+
+/* custom */
+
+body {
+    /* aside를 wrapper에 속하지 않게 만들면서 
+    aside에도 한번에 글자 속성이 위임되게 하기 위해서!!*/
+
+    /* 글자 크기 좀 줄였어요!! */
+    font-size: 18px;
+    font-weight: 600;
+    font-family: 'Jua', sans-serif;
+    text-align: center;
+}
+
+.wrapper {
+    background: #fff;
+    /* width: 100%; */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper #map {
+    /* 이걸 안주니까 td들 간 거리가 떨어진거처럼 나오네? */
+    border-collapse: collapse;
+    width: 100%;
+    border: 6px solid #ff6347;
+    /* box-sizing: content-box; */
+}
+
+
+/* td칸에 배경색 넣기 */
+#map tr:nth-child(odd) td:nth-child(odd) {
+    background: #ff6347;
+}
+#map tr:nth-child(even) td:nth-child(even) {
+    background: #ff6347;
+}
+#map tr.hang2 td:last-child {
+    background: #ff6347;
+}
+
+#map td {
+    /* 첫 브라우저 화면이 100%인데 80px을 넘어가면 부루마블 판이 화면을 넘어가서 줄임. */
+    width: 80px;
+    height: 80px;
+    border: 6px solid #ff6347;
+
+    /* padding-top: 20px; */
+    /* box-sizing: border-box; */
+
+    position: relative;
+
+}
+
+
+#map tr.hang1 td.back {
+    background: no-repeat url(https://item.kakaocdn.net/do/2c8bd4eee7ab65a6dad93403311edf90616b58f7bf017e58d417ccb3283deeb3) center bottom / 60px;
+}
+#map tr.hang1 td.go {
+    background: no-repeat url(https://item.kakaocdn.net/do/d656a50c45c900cf6c99c3831c098df58f324a0b9c48f77dbce3a43bd11ce785) center bottom / 60px #ff6347;
+}
+#map tr.hang3 td.go-island {
+    background: no-repeat url(https://png.pngtree.com/element_origin_min_pic/17/04/09/2558c2e12831d08d1c6b2aa3b2255be5.jpg) center bottom / 60px;
+}
+#map tr.hang4 td.go {
+    background: no-repeat url(https://item.kakaocdn.net/do/5c7668788e937dacb19c9648cb49b3219f17e489affba0627eb1eb39695f93dd) center bottom / 65px #ff6347;
+}
+#map tr.hang4 td.back {
+    background: no-repeat url(https://item.kakaocdn.net/do/8aac9980723dfded79809992a4d1efaea88f7b2cbb72be0bdfff91ad65b168ab) center bottom / 70px;
+}
+#map tr.hang7 td.go {
+    background: no-repeat url(https://item.kakaocdn.net/do/5c7668788e937dacb19c9648cb49b32126397d82c8691bdabf557d1536959d9c) center bottom / 70px
+}
+#map tr.hang7 td.back {
+    background: no-repeat url(https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861ac8e738cb631e72fdb9a96b36413984e) center bottom / 65px #ff6347;
+}
+#map tr.hang10 td.back {
+    background: no-repeat url(https://item.kakaocdn.net/do/2c8bd4eee7ab65a6dad93403311edf90a88f7b2cbb72be0bdfff91ad65b168ab) center bottom / 60px #ff6347;
+}
+#map tr.hang10 td.go {
+    background: no-repeat url(https://item.kakaocdn.net/do/9ac8ba2dd82efb5cad54d5c7451167a182f3bd8c9735553d03f6f982e10ebe70) center bottom / 60px;
+}
+#map tr.hang10 td:nth-child(6) {    
+    background: no-repeat url(https://item.kakaocdn.net/do/8aac9980723dfded79809992a4d1efaef604e7b0e6900f9ac53a43965300eb9a) center bottom / 60px #ff6347;
+}
+
+#map tr.hang10 td.island {
+    background-image: url(img/island.jpg);
+}
+
+#map i {
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    text-align: right;
+}
+
+#map span.lnr {
+    font-size: 30px;
+    font-weight: 700;
+    display: block;
+    text-align: right;
+}
+
+#map span.lnr.lnr-user {
+    /* position: absolute;
+    bottom: 0; */
+    font-size: 40px ;
+    font-weight: bold;
+    color: #0cc;
+    position: absolute;
+    left: 25%;
+    top: 55%;
+    transform : translate(-50% ,-50%) ;
+
+    animation: blink 0.7s step-end infinite;
+}
+
+#map span.lnr.lnr-rocket {
+    font-size: 40px ;
+    font-weight: bold;
+    color: #00c;
+    position: absolute;
+    left: 75%;
+    top: 55%;
+    transform : translate(-50% ,-50%) ;
+
+    animation: blink 0.7s step-end infinite;
+}
+
+/* 말이 깜빡이는 애니메이션 */
+@keyframes blink { 
+    50% { 
+        opacity: 0; 
+    } 
+} 
+
+
+#map #start {
+    background: #ff8c00;
+}
+
+#map #main-box {
+    background: #faf0e6;
+}
+
+#map #main-box .main-wrap {
+    /* background: #000; */
+    height: 100%; 
+}
+
+#map #main-box .main-wrap .main-title {
+    height: 200px;
+    /* background: yellow; */
+    text-align: center;
+    margin-bottom: 100px;
+    padding: 50px 0;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+/* #dice는 숨어있다가 dice-button이 눌리면 나와야함. */
+#map #main-box .main-wrap #dice {
+    width: 150px;
+    height: 150px;
+    background-image: url('https://www.emojiall.com/images/60/blobmoji/emoji_u1f3b2.png');
+    background-size: cover;
+    margin: 0 auto;
+    margin-bottom: 150px;
+
+    /* display: none으로 하면 블록 영역 자체가 사라져서 밑에 버튼이 얘 자리를 차지함. */
+    opacity: 0;
+}
+
+
+/* #dice-button를 눌렀을 때 나타날 #dice 애니메이션 */
+/* 버튼 누르면 throw 클래스가 들어가서 애니메이션이 발동되게! */
+#map #main-box .main-wrap #dice.throw {
+    animation: throw-dice 1s linear forwards;
+}
+
+@keyframes throw-dice {
+    0% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+    50% {
+        opacity: 1;
+        /* top: 100px; */
+        transform: rotateZ(-720deg) scale(1.5);
+    }
+    100% {
+        opacity: 0;
+        /* top: 300px; */
+        transform: rotate(0);
+    }
+
+}
+
+/* #map 끝 */
+
+
+/* aside꾸미기 */
+
+aside {
+    position: absolute;
+    /* left: 80%; */
+    right: -30%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+aside #guide {
+    /* background: grey; */
+    text-align: left;
+    font-size: 1.3em;
+    margin: 30px auto;
+}
+
+aside #guide .lnr.lnr-user {
+    font-size: 30px ;
+    font-weight: bold;
+    color: #0cc;
+    font-weight: 700;
+}
+
+aside #guide .lnr.lnr-rocket {
+    font-size: 30px ;
+    font-weight: bold;
+    color: #00c;
+    font-weight: 700;
+}
+
+aside #guide .lnr em {
+    color: #000;
+    font-weight: 500;
+    font-family: 'Jua', sans-serif;
+}
+
+aside #guide #user {
+    margin-bottom: 10px;
+}
+
+aside #dice-button {
+    background: #ee8eee;
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 30px auto;
+    border-radius: 50%;
+    cursor: pointer;
+
+    /* 이걸 안 쓰면 #guide도 애니메이션이 적용됨 */
+    position: fixed;
+    z-index: 0; 
+
+    animation: movement 0.4s linear infinite alternate; margin-top: 0;
+}
+
+/* 주사위버튼이 움직이는 애니메이션 */
+@keyframes movement {
+	0% {
+        margin-top: 0px;
+    }
+	100% {
+        margin-top: 10px;
+    }
+}
+
+
