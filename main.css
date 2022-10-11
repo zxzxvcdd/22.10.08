@@ -44,7 +44,9 @@ a {
     z-index: 1;
   }
 
-  
+
+
+  /* 로그인 창 */
 
  .wrapper .loginSection{
 
@@ -160,7 +162,7 @@ a {
 }
 
 
-
+/* 텍스트 페이지 */
 
 .wrapper .page{
 
@@ -238,6 +240,8 @@ a {
 
 
 }
+
+/* 페이지 버튼 */
 
 .wrapper .pageBtn button{
 
