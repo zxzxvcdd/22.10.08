@@ -11,7 +11,48 @@ a {
     border: none;
   }
 
-
+  .wrapper .userSection {
+    width: 20%;
+    position: absolute;
+    top: 50px;
+    left: 60px;
+  }
+  
+  .wrapper .userSection #user {
+    width: 100%;
+    border: 2px solid #000;
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .wrapper .userSection #user .name {
+    /* background: yellowgreen; */
+    margin: 10px;
+  }
+  
+  .wrapper .userSection #user .name span {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .wrapper .userSection #user .intro {
+    /* background: yellow; */
+    margin: 10px;
+  }
+  
+  .wrapper .userSection #user .pageNum {
+    /* background: tomato; */
+    margin: 10px;
+    font-size: 18px;
+  }
+  
+  .wrapper .userSection #user .logoutBtn button {
+    width: 40%;
+    margin-top: 5px;
+    margin-left: 60%;  
+    cursor: pointer;
+  }
 
 
   
