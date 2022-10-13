@@ -16,9 +16,9 @@ const userName = "admin",
 
 const noteData = [
     {
-      h1:"",
+      h1:"제목",
       pageNum: 1,
-      text: "",
+      text: "내용을 입력하세요",
       tags: [],
 
     }
@@ -33,25 +33,28 @@ const noteData = [
 // has to be fa-regular :)
 
 function eventListenerIcon($iconName) {
-  const $listenIcon = document.querySelector(
-    `.dropdown-content > .${$iconName}`
-  );
-  $listenIcon.addEventListener("click", (e) => {
-    // 아이콘을 페이지에 추가하기 위해 createElement 하기
-    const $newDiv = document.createElement("div");
-    $newDiv.classList.add("image");
-    $newDiv.innerHTML = `<i class="fa-regular ${$iconName} fa-2x"></i>`;
-
-    const $page = document.querySelector(".page");
-    $page.appendChild($newDiv);
-
-    // 드래그 함수 콜
-    moveIcon();
-    // console.log($page);
-
-    eventClickRemove();
-  });
-}
+    const $listenIcon = document.querySelector(
+        `.dropdown-content>.drop-wrapper> .${$iconName}`
+      );
+      $listenIcon.addEventListener("click", (e) => {
+        // 아이콘을 페이지에 추가하기 위해 createElement 하기
+        const $newDiv = document.createElement("div");
+        $newDiv.classList.add("image");
+        $newDiv.innerHTML = `<i class="fa-regular ${$iconName} fa-2x"></i>`;
+    
+        const $page = document.querySelector("#txtContent");
+        console.log($newDiv);
+        $page.appendChild($newDiv);
+        console.log($newDiv);
+        console.log("testA");
+    
+        // 드래그 함수 콜
+        moveIcon();
+        // console.log($page);
+    
+        eventClickRemove();
+      });
+    }
 
 // 페이지에 추가된 아이콘을 움직이기 위한 함수
 function moveIcon() {
@@ -152,18 +155,18 @@ function eventLogin() {
 
 // 드랍다운 박스 나오기/들어가기 이벤트
 function eventDropDown() {
-  const $iconBtn = document.querySelector(".iconDropdown");
-  const $dropDown = document.querySelector(".dropdown-content");
-
-  // select icon mouseover, dropdown
-  $iconBtn.addEventListener("mouseover", (e) => {
-    $dropDown.style.display = "block";
-    // select icon mouseleave, dropdown disappears
-    $iconBtn.addEventListener("mouseleave", (e) => {
-      $dropDown.style.display = "none";
+    const $iconBtn = document.querySelector(".iconDropdown");
+    const $dropDown = document.querySelector(".dropdown-content");
+  
+    // select icon mouseover, dropdown
+    $iconBtn.addEventListener("mouseover", (e) => {
+      $dropDown.style.display = "block";
+      // select icon mouseleave, dropdown disappears
+      // $iconBtn.addEventListener("mouseleave", (e) => {
+      //   $dropDown.style.display = "none";
+      // });
     });
-  });
-}
+  }
 
 // 아이콘 더블클릭 시 삭제
 function eventClickRemove() {
@@ -234,13 +237,26 @@ function ShowMeThePage() {
   function AddNewPage($pageNum, $txtContent) {
     const defalutNoteData = {
       pageNum: pageCount,
-      text: "",
+      h1:"제목",
+      text: "내용을 입력하세요",
       tags: [],
     };
 
     noteData.push(defalutNoteData);
+
+    const $newTitle = document.createElement("h1");
+    $newTitle.classList.add("title");
+    $newTitle.innerHTML = "제목";
+    
+
+    // $target = document.querySelector("h1")
+
+    // console.log("타이틀 : " + $target.textContent);
+
     $pageNum.textContent = `- ${noteData[pageCount - 1].pageNum} -`;
-    $txtContent.innerHTML = '';
+    $txtContent.innerHTML= noteData[pageCount - 1 ].text;
+    $txtContent.appendchild($newTitle);
+
     console.log("AddNewPageObject :", noteData);
   }
 
@@ -248,9 +264,11 @@ function ShowMeThePage() {
   function ShowPage($next, $txtContent, $pageNum) {
     const plus = "fa-plus";
     const next = "fa-angle-right";
+    
 
     $pageNum.textContent = `- ${noteData[pageCount - 1].pageNum} -`;
-    $txtContent.innerHTML = noteData[pageCount - 1].text;
+    $txtContent.innerHTML =  noteData[pageCount - 1].text;
+
 
     for (node of noteData[pageCount - 1].tags) { // 태그 추가
       $txtContent.parentElement.appendChild(node);
@@ -269,7 +287,7 @@ function ShowMeThePage() {
 
   let pageCount = 1;
 
-  const $btnList = document.querySelector(".noteBtnList");
+  const $btnList = document.querySelector(".pageBtn");
 
   /* next , prev 클릭 시 이벤트 */
   $btnList.addEventListener("click", function (e) {
@@ -277,19 +295,20 @@ function ShowMeThePage() {
     const prev = "fa-angle-left";
     const $target = e.target;
 
-    const $txtContent = document.querySelector(".txtContent");
-    const $next = document.querySelector(".next");
-    const $pageNum = document.querySelector(".pageNum");
+    const $txtContent = document.querySelector("#txtContent");
+    const $next = document.querySelector(".next-page");
+    const $pageNum = document.querySelector("#pageNum");
 
+    // console.log("h1 : "+$txtContent.firstChild);
     SavePage($txtContent);
     $next.previousElementSibling.classList.add(prev);
 
-    if ($target.classList.contains("prev")) {
+    if ($target.classList.contains("prev-page")) {
       pageCount--;
       if (pageCount === 1) {
         // 첫번째 페이지에서는 prev 삭제
         {
-          document.querySelector(".prev").classList.remove(prev);
+          document.querySelector(".prev-page").classList.remove(prev);
         }
       }
       ShowPage($next, $txtContent, $pageNum);
@@ -430,7 +449,7 @@ function ShowMeThePage() {
     }
 
 
-    // hover to show dropdown menu
+    // // hover to show dropdown menu
     eventDropDown();
   
     // add event listener for each iconsㅋ
@@ -441,7 +460,7 @@ function ShowMeThePage() {
     eventListenerIcon("fa-heart");
     eventListenerIcon("fa-hospital");
     eventListenerIcon("fa-square-check");
-  
+    
     ShowMeThePage();
     // ShowMeTheTable();
 
