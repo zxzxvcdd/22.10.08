@@ -10,9 +10,9 @@ let newPosX = 0,
 
 const userName = "admin",
     userPw = "123456",
-    iserIntro = "소개글을 입력해주세요.",
+    iserIntro = "소개글을 입력해주세요.";
 
-;
+
 
 const noteData = [
     {
@@ -23,10 +23,6 @@ const noteData = [
 
     }
   ];
-
-
-
-
 
 
 
