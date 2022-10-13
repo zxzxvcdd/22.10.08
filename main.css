@@ -180,6 +180,7 @@ font-size: 16px;
   border-radius: 15px;
   padding: 10px;
   box-sizing: border-box;
+  background: #fff;
 }
 
 .wrapper .userSection #user .name {
@@ -195,12 +196,12 @@ font-size: 16px;
 .wrapper .userSection #user .intro {
   /* background: yellow; */
   margin: 10px;
+  font-size: 16px;
 }
 
-.wrapper .userSection #user .pageNum {
-  /* background: tomato; */
-  margin: 10px;
-  font-size: 18px;
+.wrapper .userSection #user .intro button {
+  cursor: pointer;
+  margin-left: 60px;
 }
 
 .wrapper .userSection #user .logoutBtn button {
@@ -227,17 +228,12 @@ background: url(https://i.pinimg.com/564x/b0/22/6c/b0226cec295531265c23976654b3e
   no-repeat center/ 150% 150%;
 
 
-
-
 position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 
 overflow: auto;
-
-
-
 }
 
 

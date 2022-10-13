@@ -3,6 +3,8 @@
 
 
 
+
+
 (function(){
 
 
@@ -12,7 +14,11 @@
     const $loginSection = document.querySelector("#note > .loginSection");
     if ($loginSection != null) {
       eventLogin();
+      
     }
+
+
+
   
     // hover to show dropdown menu
     eventDropDown();
@@ -28,7 +34,7 @@
   
     ShowMeThePage();
     ShowMeTheTable();
-    
+
 
 
 
