@@ -225,8 +225,6 @@ function eventLogin() {
     $login.addEventListener("click", (e) => {
         e.preventDefault();
 
-        console.log("로그인");
-
         if (!validateLogin()) {
             return;
         } else {
@@ -238,7 +236,6 @@ function eventLogin() {
             $main.style.display = "block";
 
         }
-
         // const $loginFlip = document.querySelector('.loginSection');
 
         // $loginFlip.classList.add('page');
@@ -528,17 +525,12 @@ function ShowMeThePage() {
 
     const $loginSection = document.querySelector(".wrapper > .loginSection");
 
-    console.log($loginSection);
 
     if ($loginSection != null) {
         eventLogin();
-
         //   usersection 추가
-
         userSection();
-
     }
-
 
     // // hover to show dropdown menu
     eventDropDown();
