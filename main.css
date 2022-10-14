@@ -1,179 +1,223 @@
 /* reset */
 a {
-    color: inherit;
-    text-decoration: none;
-  }
-  
-  input,
-  button {
-    background: none;
-    outline: none;
-    border: none;
-  }
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  background: none;
+  outline: none;
+  border: none;
+}
 
 
-  .clearfix::after{
-    content:"";
-    clear:both;
-    display: block;
-  }
-
-  
-  /* layout  */
-
- .wrapper {
-
-    height: 100vh;
-    width: 100%;
-    position: relative;
-    background: url(
-      "https://blog.kakaocdn.net/dn/bxK1st/btrK4E43hth/QFqoQO2RTw3uwKzjdR17U1/02-%EA%B0%88%EB%8C%80-A-2022%EB%85%8410%EC%9B%94-%EB%8B%AC%EB%A0%A5%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4.png?attach=1&knm=img.png"
-    ) no-repeat  center / cover ; 
-    
-    font-size: 18px;
-    color: #000;
-    
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: block;
+}
 
 
-  }
+/* layout  */
 
-  .wrapper .main{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    z-index: 1;
-  }
+.wrapper {
+
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: url("https://blog.kakaocdn.net/dn/bxK1st/btrK4E43hth/QFqoQO2RTw3uwKzjdR17U1/02-%EA%B0%88%EB%8C%80-A-2022%EB%85%8410%EC%9B%94-%EB%8B%AC%EB%A0%A5%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4.png?attach=1&knm=img.png"
+    ) no-repeat center / cover;
+
+  font-size: 18px;
+  color: #000;
 
 
 
-  /* 로그인 창 */
+}
 
- .wrapper .loginSection{
+
+
+
+.wrapper .main {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+
+
+/* 로그인 창 */
+
+.wrapper .loginSection {
 
   width: 40%;
   height: 80%;
   border-radius: 30px;
-  background: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAzMjFfMjUg%2FMDAxNTUzMTgwMjU3NTY2.B8Uih9H4n5ANGGuqhPnsnq7i9kOiNksFLp6D_1kNdwgg.E2ORZTulPsW9RlT9krvYIPPjo6GN020w1yBXSpkGIl0g.PNG.tkfrn3345%2F%25BD%25BD%25B1%25E2%25B7%25CE%25BF%25EE_%25C6%25D0%25B5%25E5%25BB%25FD%25C8%25B0_%25B1%25C2%25B3%25EB%25C6%25AE_%25C7%25A5%25C1%25F6_%25B4%25D9%25C0%25CC%25BE%25EE%25B8%25AE_%25BD%25C9%25C7%25C3%252B%25C0%25CC%25B9%25CC%25C1%25F6_PPT.002.png&type=sc960_832")
-    no-repeat center / 100% 100%;
+  background: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAzMjFfMjUg%2FMDAxNTUzMTgwMjU3NTY2.B8Uih9H4n5ANGGuqhPnsnq7i9kOiNksFLp6D_1kNdwgg.E2ORZTulPsW9RlT9krvYIPPjo6GN020w1yBXSpkGIl0g.PNG.tkfrn3345%2F%25BD%25BD%25B1%25E2%25B7%25CE%25BF%25EE_%25C6%25D0%25B5%25E5%25BB%25FD%25C8%25B0_%25B1%25C2%25B3%25EB%25C6%25AE_%25C7%25A5%25C1%25F6_%25B4%25D9%25C0%25CC%25BE%25EE%25B8%25AE_%25BD%25C9%25C7%25C3%252B%25C0%25CC%25B9%25CC%25C1%25F6_PPT.002.png&type=sc960_832") no-repeat center / 100% 100%;
 
-    
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  z-index: 3;
 
-  display: none;
 
 
 }
 
-.wrapper .loginSection #login{
+.wrapper .loginSection .loginMain {
 
   background: #fff;
-  width: 50%;
-  height: 20%;
-
+  width: 60%;
+  height: 25%;
+  padding: 10px;
   border-radius: 40px;
+
+  box-sizing: border-box;
 
   position: absolute;
   top: 70%;
   left: 50%;
   transform: translate(-50%, 0%);
 
-
 }
 
-.wrapper .loginSection .loginButton{
+.wrapper .loginSection #login {}
 
-  background: #fff;
-  height: 20%;
-  width: 15%;
+.wrapper .loginSection .loginButton {
 
   position: absolute;
-  top: 70%;
-  left: 70%;
-  transform: translate(-50%, 0%);
+  top: 50%;
+  right: 12%;
+  transform: translate(0, -50%);
 
-  border-radius: 40px;
 }
 
-#loginBtn{
+#loginBtn {
+
+  width: 60px;
+  height: 60px;
 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-40%, -50%);
   cursor: pointer;
-  
+
 }
 
 
 
-.loginBlock{
+.loginBlock {
+
   width: 70%;
-  margin: 25px 15px 0px 30px;
+  margin: 25px 0px 0px 30px;
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
+  box-sizing: border-box;
+
   position: relative;
 
 }
 
-.loginIcon{
+.loginIcon {
   /* background: orange; */
   width: 15%;
   float: left;
 
 }
 
-.wrapper .loginSection #login .idBlock{
+.wrapper .loginSection #login .idBlock {}
 
+.wrapper .loginSection #login .idBlock .idIcon {}
 
+.wrapper .loginSection #login input {
 
-  
-
-}
-
-.wrapper .loginSection #login .idBlock .idIcon{
-
-
-}
-
-.wrapper .loginSection #login  input{
   /* background: skyblue; */
   width: 75%;
-  float:left;
   margin-left: 5%;
   line-height: 1.2em;
-  position: absolute;
-  top: 15px;
+
   font-size: 16px;
 
-
-
-}
-
-.wrapper .loginSection #login .pwBlock{
+  float: left;
+  position: absolute;
+  top: 15px;
 
 }
-.wrapper .loginSection #login .pwBlock .pwIcon{
 
+.wrapper .loginSection #login .pwBlock {}
+
+.wrapper .loginSection #login .pwBlock .pwIcon {}
+
+
+/* 사용자 정보 */
+
+.wrapper .userSection {
+  width: 20%;
+  position: absolute;
+  top: 50px;
+  left: 60px;
 }
+
+.wrapper .userSection #user {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.wrapper .userSection #user .name {
+  /* background: yellowgreen; */
+  margin: 10px;
+}
+
+.wrapper .userSection #user .name span {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.wrapper .userSection #user .intro .introText {
+  /* background: yellow; */
+  margin: 10px;
+  font-size: 16px;
+  float: left;
+}
+.wrapper .userSection #user .intro .introText input{
+  margin: 10px;
+  font-size: 16px;
+  float: left;
+}
+
+.wrapper .userSection #user .intro button {
+  cursor: pointer;
+  margin-left: 60px;
+  float: right;
+}
+
+.wrapper .userSection #user .logoutBtn button {
+  width: 40%;
+  margin-top: 5px;
+  margin-left: 60%;
+  cursor: pointer;
+}
+
+
 
 
 /* 텍스트 페이지 */
 
-.wrapper .page{
+.wrapper .page {
 
   width: 40%;
   height: 80%;
   border-radius: 30px;
 
-  background: url(https://i.pinimg.com/564x/b0/22/6c/b0226cec295531265c23976654b3e709.jpg)
-    no-repeat center/ 150% 150%;
-
-
+  background: url(https://i.pinimg.com/564x/b0/22/6c/b0226cec295531265c23976654b3e709.jpg) no-repeat center/ 150% 150%;
 
 
   position: absolute;
@@ -181,15 +225,12 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  overflow: auto;
-
-
-
+  /* overflow: auto; */
 }
 
 
 
-.wrapper .page #textContent{
+.wrapper .page #txtContent {
 
   border: 2px solid #000;
   border-radius: 30px;
@@ -204,19 +245,19 @@ a {
   resize: none;
   box-sizing: border-box;
 
-  overflow: hidden; 
+  overflow: hidden;
 
 
- 
+
 
 }
 
-.wrapper .page #textContent h1{
+.wrapper .page #txtContent h1 {
 
   /* background: orange; */
-  
+
   margin: 10px 0 15px;
-  
+
   text-align: center;
   font-size: 28px;
   font-weight: 700;
@@ -226,11 +267,11 @@ a {
 
 
 
-.wrapper #pageNum{
+.wrapper #pageNum {
 
   /* background: green; */
 
-  position: absolute; 
+  position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -243,104 +284,156 @@ a {
 
 /* 페이지 버튼 */
 
-.wrapper .pageBtn button{
+.wrapper .pageBtn button {
 
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
-  
+
 }
 
- .wrapper .pageBtn .prev-page{
-  
+.wrapper .pageBtn .prev-page {
+
   position: absolute;
   top: 50%;
   left: 30%;
   cursor: pointer;
+
+
 }
 
- .wrapper .pageBtn .next-page{
+.wrapper .pageBtn .next-page {
   position: absolute;
   top: 50%;
   right: 30%;
   cursor: pointer;
-  
+
 }
 
-.nav{
-  font-size: 24px;
+
+
+
+
+
+/* 사이드 바 */
+
+.nav {
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
-  
+
   border-radius: 10px;
-  width: 250px;
+  width: 150px;
   height: 150px;
+  background: #fcd8d4;
+
   position: absolute;
   right: 20%;
-  top: 50%;
+  top: 40%;
   transform: translate(0, -50%);
-  
-  background: #fcd8d4;
-}
 
-aside.nav{
-  margin: 10px auto 10px;
-  height:140px
-  
-}
-button.time-stamp{
-  font-size: 24px;
-}
+  box-sizing: border-box;
 
-i.fa-regular{
-  display: none;
 }
 
 
-div.dropdown-content>div{
-  display: none;
-  height: 500px;
-}
 
-button.time-stamp{
-  display: block;
-  border-radius: 30px 30px 0 0;
-  cursor:pointer;
+button.time-stamp {
+  font-size: 20px;
+  font-weight: 700;
   text-align: center;
-  margin: 10px auto;
-}
-button.time-stamp:hover{
-  
-  cursor:pointer;
-}
 
-div.dropdown-content:hover{
-  background: white;
-  border-radius: 30px 30px 0 0;
   width: 80%;
-  height: 100%;
-  display: block;
-  cursor:pointer;
+  height: 30%;
+  margin: 10% auto;
+  
+  cursor: pointer;
+}
+
+button.time-stamp:hover{
+
+  background: white ;
+  
+  height: 30%;
+  width: 80%;
+
+  border-radius: 10px;
+  
+}
+
+
+
+.dropdown-content{
+
+  line-height: 75px;
+  width: 80%;
+  height: 120px;
+
+  text-align: center;
+
   margin: 0 auto;
-  margin-bottom: 10px;
+
 }
 
-div.dropdown-content:hover *{
+.dropdown-content:hover {
   background: white;
-  border-radius: 30px 30px 0 0;
+ 
+  border-radius: 30px;
+
+  cursor: pointer;
+
+}
+
+
+.drop-wrapper {
+
+  background: white;
   width: 100%;
-  height: 52px;
+  height: 280px;
+  margin: 0 auto;
+  
+  
+  position: relative;
+  top: -15px;
+  
+  border-radius: 0px 0px 30px 30px;
+  overflow: hidden;
+
+  display: none;
+}
+
+.drop-wrapper i.fa-regular {
+  position: relative;
+  line-height: 2em;
   display: block;
-  cursor:pointer;
 }
 
-div.dropdown-content:hover i.fa-regular{
+.drop-wrapper i.fa-regular:hover {
+  background: gray;
   
 }
 
 
 
 
+.page .image:hover {
+  background: gray;
+  display:flex
 
+}
 
+.page .image {
+  position: absolute;
+  top: 40%;
+  left:30%;
+  cursor: pointer;
+}
 
-
-  
+.now {
+  position: absolute;
+  right: 5%;
+  top: -3%;
+  color: #fcd8d4;
+  font-weight: 700;
+  cursor: pointer; 
+  display: flex;
+}
