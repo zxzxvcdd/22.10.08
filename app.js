@@ -43,10 +43,10 @@ function eventListenerIcon($iconName) {
         $newDiv.innerHTML = `<i class="fa-regular ${$iconName} fa-2x"></i>`;
 
         const $page = document.querySelector("#txtContent");
-        console.log($newDiv);
+        // console.log($newDiv);
         $page.appendChild($newDiv);
-        console.log($newDiv);
-        console.log("testA");
+        // console.log($newDiv);
+        // console.log("testA");
 
         // 드래그 함수 콜
         moveIcon();
@@ -65,73 +65,73 @@ function userSection() {
     $uName.textContent = userName;
 
     // 소개글 수정
-    function modifyIntro(){
+    function modifyIntro() {
 
-    const $modify = document.querySelector(".intro button");
+        const $modify = document.querySelector(".intro button");
 
-    // intro 수정 
-    $modify.addEventListener("click", (e) => {
-        if (introCnt === 0) {
+        // intro 수정 
+        $modify.addEventListener("click", (e) => {
+            if (introCnt === 0) {
 
-            const $introSpan = document.querySelector(".introText > span");
+                const $introSpan = document.querySelector(".introText > span");
 
-            userIntro = $introSpan.textContent;
+                userIntro = $introSpan.textContent;
 
-            const $newInput = document.createElement("input");
+                const $newInput = document.createElement("input");
 
-            $newInput.setAttribute('value', userIntro);
-
-
-
-            $introSpan.parentElement.appendChild($newInput);
-            $introSpan.parentElement.removeChild($introSpan);
+                $newInput.setAttribute('value', userIntro);
 
 
-            introCnt = 1;
 
-        } else {
-
-            const $introInput = document.querySelector(".introText > input");
+                $introSpan.parentElement.appendChild($newInput);
+                $introSpan.parentElement.removeChild($introSpan);
 
 
-            console.log("인트로인풋 :" + $introInput.value)
-            console.log("인풋 텍스트 :" + $introInput.textContent)
+                introCnt = 1;
 
-            userIntro = $introInput.value;
+            } else {
 
-            const $newSpan = document.createElement("span");
-
-            console.log("유저 인트로 :" + userIntro);
-
-            $newSpan.textContent = userIntro;
-
-            console.log($newSpan)
-
-            $introInput.parentElement.appendChild($newSpan);
-            $introInput.parentElement.removeChild($introInput);
+                const $introInput = document.querySelector(".introText > input");
 
 
-            introCnt = 0;
+                console.log("인트로인풋 :" + $introInput.value)
+                console.log("인풋 텍스트 :" + $introInput.textContent)
 
-        };
+                userIntro = $introInput.value;
+
+                const $newSpan = document.createElement("span");
+
+                console.log("유저 인트로 :" + userIntro);
+
+                $newSpan.textContent = userIntro;
+
+                console.log($newSpan)
+
+                $introInput.parentElement.appendChild($newSpan);
+                $introInput.parentElement.removeChild($introInput);
 
 
-    });
+                introCnt = 0;
+
+            };
+
+
+        });
 
 
 
     }
-    
+
     // 로그아웃
     function logout() {
 
-    const $logout = document.querySelector(".logoutBtn");
+        const $logout = document.querySelector(".logoutBtn");
 
-    $logout.addEventListener("click", (e) => {
+        $logout.addEventListener("click", (e) => {
 
-        window.location.reload()
+            window.location.reload()
 
-    });
+        });
 
 
 
@@ -245,15 +245,15 @@ function eventLogin() {
 // 드랍다운 박스 나오기/들어가기 이벤트
 function eventDropDown() {
     const $iconBtn = document.querySelector(".iconDropdown");
-    const $dropDown = document.querySelector(".dropdown-content");
+    const $dropDown = document.querySelector(".drop-wrapper");
 
     // select icon mouseover, dropdown
     $iconBtn.addEventListener("mouseover", (e) => {
         $dropDown.style.display = "block";
         // select icon mouseleave, dropdown disappears
-        // $iconBtn.addEventListener("mouseleave", (e) => {
-        //   $dropDown.style.display = "none";
-        // });
+        $iconBtn.addEventListener("mouseleave", (e) => {
+          $dropDown.style.display = "none";
+        });
     });
 }
 
@@ -285,7 +285,9 @@ function initialize() {
 // Page 구현
 function ShowMeThePage() {
 
+    let pageCount = 1;
 
+    
     /* 태그 삭제 */
     function clearTags($txtContent) {
         const $page = $txtContent.parentElement;
@@ -307,13 +309,13 @@ function ShowMeThePage() {
     /* 페이지 저장 함수 */
     function SavePage($txtContent) {
         noteData[pageCount - 1].text = $txtContent.innerHTML;
-        console.log(noteData[pageCount - 1].text);
+        // console.log(noteData[pageCount - 1].text);
         if ($txtContent.nextElementSibling) {
             noteData[pageCount - 1].tags = AddTags($txtContent);
             clearTags($txtContent);
         }
 
-        console.log("SavePage : ", noteData[pageCount - 1]);
+        // console.log("SavePage : ", noteData[pageCount - 1]);
     }
 
     /* 새 페이지 추가 함수 */
@@ -329,17 +331,16 @@ function ShowMeThePage() {
 
         const $newTitle = document.createElement("h1");
         $newTitle.classList.add("title");
-        $newTitle.innerHTML = "제목";
+        $newTitle.innerHTML = noteData[pageCount - 1].h1;
 
 
 
         $pageNum.textContent = `- ${noteData[pageCount - 1].pageNum} -`;
         $txtContent.innerHTML = noteData[pageCount - 1].text;
         $txtContent.insertBefore($newTitle, $txtContent.firstChild);
-        $txtContent.prepend($newTitle);
 
 
-        console.log("AddNewPageObject :", noteData);
+        // console.log("AddNewPageObject :", noteData);
     }
 
     /* 선택한 페이지 보여주는 함수 */
@@ -367,7 +368,7 @@ function ShowMeThePage() {
         console.log("ShowPage :", noteData[pageCount - 1]);
     }
 
-    let pageCount = 1;
+   
 
     const $btnList = document.querySelector(".pageBtn");
 
