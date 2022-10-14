@@ -225,7 +225,7 @@ function eventLogin() {
     $login.addEventListener("click", (e) => {
         e.preventDefault();
 
-        console.log(validateLogin());
+        console.log("로그인");
 
         if (!validateLogin()) {
             return;
@@ -525,7 +525,11 @@ function ShowMeThePage() {
 
     initialize();
 
-    const $loginSection = document.querySelector("#note > .loginSection");
+
+    const $loginSection = document.querySelector(".wrapper > .loginSection");
+
+    console.log($loginSection);
+
     if ($loginSection != null) {
         eventLogin();
 
