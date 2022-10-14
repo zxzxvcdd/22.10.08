@@ -44,7 +44,6 @@ button {
   height: 100%;
   width: 100%;
   position: relative;
-  z-index: 1;
 }
 
 
@@ -65,9 +64,7 @@ top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
 
-z-index: 3;
 
-display: none;
 
 
 }
@@ -76,7 +73,7 @@ display: none;
 
 background: #fff;
 width: 50%;
-height: 20%;
+height: 25%;
 
 border-radius: 40px;
 
@@ -91,7 +88,7 @@ transform: translate(-50%, 0%);
 .wrapper .loginSection .loginButton{
 
 background: #fff;
-height: 20%;
+height: 25%;
 width: 15%;
 
 position: absolute;
@@ -193,15 +190,17 @@ font-size: 16px;
   font-weight: 700;
 }
 
-.wrapper .userSection #user .intro {
+.wrapper .userSection #user .intro .introText {
   /* background: yellow; */
   margin: 10px;
   font-size: 16px;
+  float: left;
 }
 
 .wrapper .userSection #user .intro button {
   cursor: pointer;
   margin-left: 60px;
+  float: right;
 }
 
 .wrapper .userSection #user .logoutBtn button {
@@ -210,8 +209,6 @@ font-size: 16px;
   margin-left: 60%;  
   cursor: pointer;
 }
-
-
 
 
 
