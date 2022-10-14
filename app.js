@@ -1,4 +1,3 @@
-
 //////////////////////////// global variable ////////////////////////////
 
 // 드래그시 가져올 x,y 좌표
@@ -501,5 +500,4 @@ function ShowMeThePage() {
     ShowMeThePage();
 
 })();
-
 

@@ -1,11 +1,9 @@
-/* reset */
 a {
   color: inherit;
   text-decoration: none;
 }
 
-input,
-button {
+input, button {
   background: none;
   outline: none;
   border: none;
@@ -25,13 +23,12 @@ button {
 
   height: 100vh;
   width: 100%;
-  position: relative;
-  background: url("https://blog.kakaocdn.net/dn/bxK1st/btrK4E43hth/QFqoQO2RTw3uwKzjdR17U1/02-%EA%B0%88%EB%8C%80-A-2022%EB%85%8410%EC%9B%94-%EB%8B%AC%EB%A0%A5%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4.png?attach=1&knm=img.png"
-    ) no-repeat center / cover;
-
+  background: url("wrapper.png") no-repeat center / cover;
+  
   font-size: 18px;
   color: #000;
-
+  
+  position: relative;
 
 
 }
@@ -54,7 +51,7 @@ button {
   width: 40%;
   height: 80%;
   border-radius: 30px;
-  background: url("https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTAzMjFfMjUg%2FMDAxNTUzMTgwMjU3NTY2.B8Uih9H4n5ANGGuqhPnsnq7i9kOiNksFLp6D_1kNdwgg.E2ORZTulPsW9RlT9krvYIPPjo6GN020w1yBXSpkGIl0g.PNG.tkfrn3345%2F%25BD%25BD%25B1%25E2%25B7%25CE%25BF%25EE_%25C6%25D0%25B5%25E5%25BB%25FD%25C8%25B0_%25B1%25C2%25B3%25EB%25C6%25AE_%25C7%25A5%25C1%25F6_%25B4%25D9%25C0%25CC%25BE%25EE%25B8%25AE_%25BD%25C9%25C7%25C3%252B%25C0%25CC%25B9%25CC%25C1%25F6_PPT.002.png&type=sc960_832") no-repeat center / 100% 100%;
+  background: url("loginSection.jpg") no-repeat center / 100% 100%;
 
 
   position: absolute;
