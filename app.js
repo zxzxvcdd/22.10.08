@@ -16,11 +16,9 @@ const userName = "admin",
 
 const noteData = [
     {
-        h1: "제목",
         pageNum: 1,
         text: "내용을 입력하세요",
         tags: [],
-        tstmp: "",
     }
 ];
 
@@ -366,7 +364,6 @@ function ShowMeThePage() {
     function AddNewPage($pageNum, $txtContent) {
         const defalutNoteData = {
             pageNum: pageCount,
-            h1: "제목",
             text: "내용을 입력하세요",
             tags: [],
         };
@@ -375,7 +372,7 @@ function ShowMeThePage() {
 
         const $newTitle = document.createElement("h1");
         $newTitle.classList.add("title");
-        $newTitle.innerHTML = noteData[pageCount - 1].h1;
+        $newTitle.innerHTML = "제목";
 
 
 
